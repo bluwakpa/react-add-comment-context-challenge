@@ -9,11 +9,6 @@ export default class CommentForm extends Component {
     const { author, comment } = ev.target
 
     /* change code */
-    console.log({
-      author: author.value,
-      comment: comment.value,
-    })
-    
     this.context.addComment({
       author: author.value,
       comment: comment.value,
@@ -24,6 +19,7 @@ export default class CommentForm extends Component {
   }
 
   render() {
+    console.log(this.context.comments)
     return (
       <div className='CommentForm'>
         <h3>Add a comment</h3>
